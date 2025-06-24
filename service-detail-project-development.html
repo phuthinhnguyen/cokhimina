@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/service-detail.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="assets/css/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.6.4.js"></script>
+    <script src="assets/js/HTMLImporter.js"></script>
+    <script src="assets/js/language.js"></script>
+    <link rel="icon" type="image/x-icon" href="assets/image/index/LogoBYECO2-footer.svg">
+    <title>Services</title>
+    <style>
+        @font-face {
+            font-family: "Anybody";
+            src: url("assets/font/Anybody/Anybody-VariableFont_wdth_wght.ttf");
+        }
+        @font-face {
+            font-family: "Inter";
+            src: url("assets/font/Inter/Inter-VariableFont_slnt,wght.ttf");
+        }
+        @font-face {
+            font-family: "Mulish";
+            src: url("assets/font/Mulish/Mulish-VariableFont_wght.ttf");
+        }
+        @font-face {
+            font-family: "Work Sans";
+            src: url("assets/font/Work_Sans/WorkSans-VariableFont_wght.ttf");
+        }
+        #menu-service, #menu-service h5{
+            color: #20A049;
+        }
+    </style>
+</head>
+<body>
+    <!-- top -->
+    <script>HTMLImporter.import("menu.html");</script>
+    
+    <!-- banner -->
+    <div class="banner" style="background-image: url(assets/image/service/bg.png);">
+        <div class="text">
+            <h1 lang="en">Project Development</h1>
+            <h1 lang="vi">Phát triển dự án</h1>
+        </div>
+    </div>
+
+    <div class="service-detail-content">
+        <h2 lang="en">Project Development</h2>
+        <h2 lang="vi">Phát triển dự án</h2>
+        <div class="content-wrap">
+            <div class="img">
+                <img src="assets/image/service-detail/gallery7.svg" alt="">
+            </div>
+            <div class="text">
+                <p lang="en">To develop and implement energy efficiency and renewable energy investment projects, which can provide sustainable and increasing reductions in GHG emissions.</p>
+                <p lang="vi">Lập và triển khai các dự án đầu tư nâng cao hiệu quả năng lượng, phát triển các dạng năng lượng tái tạo nhằm làm giảm phát thải khí nhà kính một cách bền vững cho doanh nghiệp.</p>
+            </div>
+        </div>
+    </div>
+   
+
+    <!-- pagination -->
+    <div class="pagination" style="display: none;">
+        <img src="assets/image/service/pagination1.svg" alt="">
+        <img src="assets/image/service/pagination2.svg" alt="">
+        <div>
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">4</a>
+            <a href="">5</a>
+        </div>
+        <img src="assets/image/service/pagination3.svg" alt="">
+        <img src="assets/image/service/pagination4.svg" alt="">
+    </div>
+
+    <!-- footer -->
+    <script>HTMLImporter.import("footer.html");</script>
+    <div id="scrolltop">
+        <img src="assets/image/index/totop.svg" alt="">
+    </div>
+    <script>
+        $("#scrolltop").click(function name(params) {
+            $("html").animate({scrollTop:0});
+        })
+        window.onscroll=function(){scrolltop()};
+        function scrolltop(){
+            if ((document.body.scrollTop>100) || (document.documentElement.scrollTop>100)){
+            $("#scrolltop").addClass("scrolltop-show");
+            $("nav").addClass('nav-sticky');
+            }
+            else {
+                $("#scrolltop").removeClass("scrolltop-show");
+                $("nav").removeClass('nav-sticky');
+            };
+        }
+    </script>
+</body>
+</html>
