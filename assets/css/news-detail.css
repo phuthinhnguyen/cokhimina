@@ -20,7 +20,7 @@ input, textarea {
   justify-content: space-between;
   align-items: center;
   height: 316px;
-  max-width: 100%;
+  max-width: 1200px;
   margin: auto;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -47,7 +47,7 @@ input, textarea {
 
 .detail {
   margin: auto;
-  max-width: 100%;
+  max-width: 1200px;
   padding-top: 80px;
   padding-bottom: 80px;
   display: flex;

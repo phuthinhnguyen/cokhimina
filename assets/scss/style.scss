@@ -22,47 +22,47 @@ input,button,textarea{
     border: none;
 }
 // top
-.top{
-    @include font($fontAnybody);
-    color: $light-04;
-    max-width: $max-width-homepage;
-    height: 56px;
-    margin: auto;
-    background-color: $primary-green;
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    font-size: 16px;
-    padding: $padding;
-    p{
-        display: inline-block;
-        transition: 0.3s;
-        &:hover{
-            color: $dark-blue-01;
-            cursor: pointer;
-        }
-    }
-    .left{
-        width: 172px;
-        height: 24px;
-        display: flex;
-        justify-content: space-between;
-        img{
-            width: 18px;
-            height: 18px;
-        }
-    }
-    .right{
-        width: 197px;
-        height: 24px;
-        display: flex;
-        justify-content: space-between;
-        img{
-            width: 24px;
-            height: 24px;
-        }
-    }
-}
+// .top{
+//     @include font($fontAlata);
+//     color: $light-04;
+//     max-width: $max-width-homepage;
+//     height: 56px;
+//     margin: auto;
+//     background-color: $primary-blue;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center ;
+//     font-size: 16px;
+//     padding: $padding;
+//     p{
+//         display: inline-block;
+//         transition: 0.3s;
+//         &:hover{
+//             color: $dark-blue-01;
+//             cursor: pointer;
+//         }
+//     }
+//     .left{
+//         width: 172px;
+//         height: 24px;
+//         display: flex;
+//         justify-content: space-between;
+//         img{
+//             width: 18px;
+//             height: 18px;
+//         }
+//     }
+//     .right{
+//         width: 197px;
+//         height: 24px;
+//         display: flex;
+//         justify-content: space-between;
+//         img{
+//             width: 24px;
+//             height: 24px;
+//         }
+//     }
+// }
 @keyframes navsticky {
     0%{opacity: 0;transform: translate3d(0,-20px,0);}
     100%{opacity: 1;transform: none;}
@@ -79,22 +79,23 @@ nav{
     position: sticky;
     top: 0;
     z-index: 3;
-    @include font($fontAnybody);
-    color: black;
+    @include font($fontAlata);
+    color: white;
     max-width: $max-width-homepage;
     margin: auto;
-    background-color: #FAFAFC;
+    background-color: rgb(87, 87, 87);
     .row{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         width: 100%;
         height: 90px;
-        padding: $padding;
+        // padding: $padding;
+        margin: 0;
         .left{
-            flex: 1;
+            flex: 0.5;
             img{
-                width: 105px;
+                width: 80px;
                 height: 66px;
             }
         }
@@ -103,33 +104,34 @@ nav{
             height: 56px;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            justify-content: center;
             ul{
                 list-style-type: none;
                 padding: 0;
                 margin: 0;
                 li{
                     float: left;
-                    margin-left: 60px;
+                    margin-left: 40px;
                     position: relative;
                     a{
                         display: flex;
                         align-items: center;
                         text-decoration: none;
-                        color: black;
+                        color: white;
                         h6{
                             margin: 0;
                             padding: 0;
-                            font-weight: bold;
+                            text-transform: uppercase;
+                            // font-weight: bold;
                             img{
                                 width: 14px;
                                 height: 7px;
                                 margin-left: 22px;
-                                color: $primary-green;
+                                color: $primary-blue;
                             }
                         }
                         &:hover{
-                            color: $primary-green;
+                            color: $primary-blue;
                         } 
                     }
                     .menu-dropdown
@@ -140,7 +142,7 @@ nav{
                         padding: 20px;
                         top:20px;
                         left: -20px;
-                        border-bottom: 5px solid $primary-green;
+                        border-bottom: 5px solid $primary-blue;
                         .menu-dropdown-item
                         {
                             .menu-dropdown-item-content{
@@ -173,19 +175,40 @@ nav{
             }
         }
         .right{
-            display: none;
-            img{
-                width: 24px;
-                height: 16px;
-                margin-left: 16px;
+            // display: none;
+            flex: 1;
+            // img{
+            //     width: 24px;
+            //     height: 16px;
+            //     margin-left: 16px;
+            //     &:hover{
+            //         cursor: pointer;
+            //     }
+            // }
+            .nav-right-contact{
+                padding: 20px 22px;
+                background-color: $primary-blue;
+                border-radius: 17px;
+                font-size: 21px;
+                cursor: pointer;
+                text-align: center;
                 &:hover{
-                    cursor: pointer;
-                }
+                        background-color: white;
+                        color: black;
+                    }
             }
         }
         .menu{
             display: none;
+            max-width: 50px;
             a{
+                padding: 10px;
+                background-color: white;
+                border-radius: 14px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 48px;
                 img{
                     width: 24px;
                     height: 24px;
@@ -198,6 +221,7 @@ nav{
             flex-direction: column;
             align-items: center;
             width: 100%;
+            background-color: rgb(87, 87, 87);
             .offcanvas-header{
                 width: 100%;
                 display: flex;
@@ -206,10 +230,16 @@ nav{
                 row-gap: 35px;
                 padding: 20px 40px;
                 img{
-                    width: 66px;
-                    height: 41px;
+                    width: 80px;
+                    height: 66px;
                 }
-                div{
+                a{
+                    padding: 8px;
+                    border-radius: 15px;
+                    background-color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     img{
                         width: 30px;
                         height: 30px;
@@ -220,8 +250,7 @@ nav{
                 }
             }
             .offcanvas-header-bottom{
-                height: 404px;
-             
+                height: 350px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
@@ -230,19 +259,32 @@ nav{
                     display: block;
                     text-decoration: none;
                     &:first-of-type{
-                        color: $primary-green;
+                        color: $primary-blue;
                     }
                     h5{
-                        @include font($fontAnybody);
+                        @include font($fontAlata);
                         transition: 0.3s;
-                        color: $dark-blue-01;
-                        font-weight: bold;
+                        color: white;
+                        // font-weight: bold;
+                        font-size: 16px;
                     }
                     &:hover{
                         h5{
-                            color: $primary-green;
+                            color: $primary-blue;
                         }
                     }
+                }
+                .offcanvas-header-bottom-contact{
+                    padding: 20px 22px;
+                    background-color: $primary-blue;
+                    border-radius: 17px;
+                    font-size: 21px;
+                    cursor: pointer;
+                    text-align: center;
+                    &:hover{
+                            background-color: white;
+                            color: black;
+                        }
                 }
                 .language{
                     width: 128px;
@@ -270,7 +312,7 @@ nav{
 
 // image-slide
 .image-slide{
-    @include font($fontAnybody);
+    @include font($fontAlata);
     height: 540px;
     max-width: $max-width-homepage;
     margin: auto;
@@ -375,11 +417,11 @@ nav{
             // width: 313px;
             .text{
                 text-align: center;
-                @include font($fontAnybody);
+                @include font($fontAlata);
                 strong.number {
                     font-weight: bold;
                     font-size: 40px;
-                    color: $primary-green;
+                    color: $primary-blue;
                     display: block;
                     &::after{
                         content: "+";
@@ -419,11 +461,11 @@ nav{
                 height: 156px;
                 h1{
                     font-weight: bold;
-                    color: $primary-green;
-                    @include font($fontAnybody);
+                    color: $primary-blue;
+                    @include font($fontAlata);
                 }
                 p{
-                    @include font($fontInter);
+                    @include font($fontAlata);
                     &:first-of-type{
                         color: $light-04;
 
@@ -463,13 +505,13 @@ nav{
                         margin-top: 10px;
                     }
                     h4{
-                        @include font($fontAnybody);
+                        @include font($fontAlata);
                         font-weight: bold;
                         color: $state-warning-01;
                         margin-left: 16px;
                     }
                     p{
-                        @include font($fontInter);
+                        @include font($fontAlata);
                         color: $dark-03;
                         margin-left: 16px;
                     }
@@ -542,7 +584,7 @@ nav{
                 }
                 
                 p{
-                    @include font($fontInter);
+                    @include font($fontAlata);
                     &:first-of-type{
                         font-size: small;
                         color: $dark-02;
@@ -562,7 +604,7 @@ nav{
                     border-radius: 50%;
                 }
                 h6{
-                    @include font($fontAnybody);
+                    @include font($fontAlata);
                     font-weight: bold;
                     color: $dark-blue-01;
                     margin-top: 20px;
@@ -571,7 +613,7 @@ nav{
         }
         .carousel-nav{
             position: absolute;
-            color: $primary-green;
+            color: $primary-blue;
             border-radius: 50%;
             background-color: $dark-blue-01;
         }
@@ -611,14 +653,14 @@ nav{
             text-align: center;     
             width: 100%;    
             p{
-                @include font($fontInter);
+                @include font($fontAlata);
                 font-size: 14px;
                 margin: 0;
                 color: $dark-01;
                 margin-top: 12px;
             }
             h6{
-                @include font($fontAnybody);
+                @include font($fontAlata);
                 font-weight: bold;
                 color: $primary-coral-50;
                 margin-top: 12px;
@@ -770,13 +812,13 @@ nav{
                     margin: 0 10px;
                 }
                 p{
-                    @include font($fontInter);
+                    @include font($fontAlata);
                     display: flex;
                     align-items: center;
                 }
                 h3{
                     font-weight: bold;
-                    @include font($fontAnybody);
+                    @include font($fontAlata);
                 }
             }
         }
@@ -800,7 +842,7 @@ nav{
                     flex-direction: column;
                     justify-content: space-between;
                     p{
-                        @include font($fontInter);
+                        @include font($fontAlata);
                         display: flex;
                         align-items: center;
                 
@@ -819,7 +861,7 @@ nav{
                     }
                     h5{
                         font-weight: bold;
-                        @include font($fontAnybody);
+                        @include font($fontAlata);
                     }
                 }
                 .content-img{
@@ -866,7 +908,7 @@ nav{
                    
                 }
                 p{
-                    @include font($fontInter);
+                    @include font($fontAlata);
                     display: flex;
                     align-items: center;
                     a{
@@ -880,7 +922,7 @@ nav{
                 }
                 h3{
                     font-weight: bold;
-                    @include font($fontAnybody);
+                    @include font($fontAlata);
                 }
                 div{
                     width: 60%;
@@ -888,7 +930,7 @@ nav{
                     border-radius: 20px;
                     border: 2px solid $dark-04;
                     text-align: center;
-                    @include font($fontInter);
+                    @include font($fontAlata);
                     color: $dark-04;
                     transition: .3s;
                     &:hover{
@@ -907,7 +949,7 @@ nav{
                 }
         
                 h6{
-                    @include font($fontAnybody);
+                    @include font($fontAlata);
                     font-weight: bold;
                 }
                 .bottom{
@@ -921,7 +963,7 @@ nav{
                             font-weight: bold
                         }
                         p{
-                            @include font($fontInter);
+                            @include font($fontAlata);
                             display: flex;
                             align-items: center;
                             a{
@@ -1011,7 +1053,7 @@ nav{
                 height: 52px;
                 text-align: center;
                 h1{
-                    @include font($fontAnybody);
+                    @include font($fontAlata);
                     color: $light-04;
                 }
             }
@@ -1053,10 +1095,10 @@ nav{
             }
             button{
                 height: 59px;
-                background-color: $primary-green;
+                background-color: $primary-blue;
                 width: 181px;
                 color: #fff;
-                @include font($fontMulish);
+                @include font($fontAlata);
                 font-size: 18px;
                 border-radius: 6px;
                 transition: 0.5s;
@@ -1102,7 +1144,7 @@ footer{
             }   
             h5{
                 font-weight: bold;
-                @include font($fontAnybody);
+                @include font($fontAlata);
                 color: $footer-color;
             }
             div{
@@ -1126,13 +1168,13 @@ footer{
                 justify-content: flex-start;
                 row-gap: 20px;
                 h4{
-                    @include font($fontAnybody);
-                    color: $primary-green;
+                    @include font($fontAlata);
+                    color: $primary-blue;
                     font-weight: bold;
                 }
                 .content{
                     p{
-                        @include font($fontInter);
+                        @include font($fontAlata);
                         color: $footer-color;
                     }
                     div{
@@ -1156,8 +1198,8 @@ footer{
                 justify-content: flex-start;
                 row-gap: 20px;
                 h4{
-                    @include font($fontAnybody);
-                    color: $primary-green;
+                    @include font($fontAlata);
+                    color: $primary-blue;
                     font-weight: bold;
                 }
                 .content{
@@ -1170,7 +1212,7 @@ footer{
                         text-decoration: none;
                         color: $footer-color;
                   
-                        @include font($fontWorksans);
+                        @include font($fontAlata);
                         font-size: 17px;
                         transition: 0.3s;
                         &:hover{
@@ -1195,7 +1237,7 @@ footer{
         flex-direction: column;
         justify-content: center;
         p{
-            @include font($fontInter);
+            @include font($fontAlata);
             color: #fff;
             font-size: small;
             margin: 0;

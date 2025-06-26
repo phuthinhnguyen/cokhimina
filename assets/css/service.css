@@ -12,7 +12,7 @@ input, textarea {
 }
 
 .banner {
-  max-width: 100%;
+  max-width: 1200px;
   margin: auto;
   height: 316px;
   background-position: center;
@@ -41,7 +41,7 @@ input, textarea {
   padding: 0 50px;
   padding-top: 80px;
   padding-bottom: 80px;
-  max-width: 100%;
+  max-width: 1200px;
 }
 .filters-container .filters-wrap {
   list-style-type: none;

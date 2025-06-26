@@ -9,11 +9,11 @@
     h1{
         color: $primary-green;
         font-weight: bold;
-        @include font($fontAnybody);
+        @include font($fontAlata);
     }
     p{
         max-width: 552px;
-        @include font($fontInter);
+        @include font($fontAlata);
         &:first-of-type{
             color: $primary-coral-50;
             font-weight: 600;
@@ -26,11 +26,11 @@
 
 @mixin newsandblogs(){
     h4{
-        @include font($fontAnybody);
+        @include font($fontAlata);
         font-weight: bold;
     }
     p{
-        @include font($fontInter);
+        @include font($fontAlata);
         color: $dark-02;
     }
 }
@@ -46,7 +46,7 @@
     padding: 20px;
     p{
         display: inline-block;
-        @include font($fontInter);
+        @include font($fontAlata);
         color: $dark-02;
     }
     div{
@@ -70,12 +70,12 @@
     .text{
         text-align: center;
         h1{
-            @include font($fontAnybody);
+            @include font($fontAlata);
             font-weight: bold;
             color: $primary-green;
         }
         p{
-            @include font($fontInter);
+            @include font($fontAlata);
             font-size: medium;
             color: $light-04;
             max-width: 552px;
@@ -106,7 +106,7 @@
             margin-bottom: 20px;
         }
         h3{
-            @include font($fontAnybody);
+            @include font($fontAlata);
             font-weight: bold;
         }
         p{
@@ -152,7 +152,7 @@
         padding: 0;
         margin: auto;
         li{
-            @include font($fontInter);
+            @include font($fontAlata);
             display: table-cell;
             max-width: 184px;
             cursor: pointer;
@@ -201,7 +201,7 @@
     bottom: 90px;
     p:first-of-type{
         span{
-            @include font($fontInter);
+            @include font($fontAlata);
             font-size: 14px;
         }
         a{
@@ -217,14 +217,14 @@
         }
     }
     h3{
-        @include font($fontAnybody);
+        @include font($fontAlata);
         font-weight: bold;
     }
     p:last-of-type{
-        @include font($fontInter);
+        @include font($fontAlata);
     }
     .readmore{
-        @include font($fontInter);
+        @include font($fontAlata);
         border-radius: 999px;
         height: 40px;
         width: 132px;
@@ -281,7 +281,7 @@
             height: 30px;
         }
         h3{
-            @include font($fontAnybody);
+            @include font($fontAlata);
             font-weight: bold;
             color: $primary-green;
             display: inline-block;
@@ -291,7 +291,7 @@
         }   
     }
     p{
-        @include font($fontInter);
+        @include font($fontAlata);
         font-weight: bold;
         font-size: 16px;
         width: 131px;
@@ -314,7 +314,7 @@
 @mixin categories{
     .head{
         h3{
-            @include font($fontAnybody);
+            @include font($fontAlata);
             color: $primary-green;
             font-weight: bold;
             margin: 0;
@@ -326,7 +326,7 @@
             padding: 7px 20px;
             margin-top: 8px;
             color: $dark-blue-01;
-            @include font($fontAnybody);
+            @include font($fontAlata);
             font-size: 22px;
             &:first-of-type{
                 font-weight: bold;
@@ -345,7 +345,7 @@
         cursor: pointer;
     }
     h3{
-        @include font($fontAnybody);
+        @include font($fontAlata);
         color: $primary-green;
         font-weight: bold;
     }
@@ -367,7 +367,7 @@
                 height: 39px;
             }
             p{
-                @include font($fontInter);
+                @include font($fontAlata);
                 color: $light-04;
                 margin: 0;
             }
