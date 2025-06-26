@@ -95,7 +95,104 @@
         </div>
     </div>
 
+    <div class="corevalue">
+        <div lang="en" class="corevalue-title">
+            CORE VALUES
+        </div>
+        <div lang="vi" class="corevalue-title">
+            GIÁ TRỊ CỐT LÕI
+        </div>
+        <div class="corevalue-content">
+            <div class="timeline">
+                <div class="timeline-item" data-number="01">
+                    <h3 lang="en">Quality</h3>
+                    <p lang="en">Always prioritize the accuracy and durability of the product.</p>
+                    <h3 lang="vi">Chất lượng</h3>
+                    <p lang="vi">Luôn đặt độ chính xác và độ bền của sản phẩm lên hàng đầu.</p>
+                </div>
+                <div class="timeline-item" data-number="02">
+                    <h3 lang="en">Reputation</h3>
+                    <p lang="en">Commitment to timely delivery, honesty in cooperation, and transparency in the process.</p>
+                    <h3 lang="vi">Uy tín</h3>
+                    <p lang="vi">Cam kết đúng tiến độ, trung thực trong hợp tác và minh bạch trong quy trình.</p>
+                </div>
+                <div class="timeline-item" data-number="03">
+                    <h3 lang="en">Effectiveness</h3>
+                    <p lang="en">Optimize the production process to provide the best value for customers.</p>
+                    <h3 lang="vi">Hiệu quả</h3>
+                    <p lang="vi">Tối ưu quy trình sản xuất để mang lại giá trị tốt nhất cho khách hàng.</p>
+                </div>
+                <div class="timeline-item" data-number="04">
+                    <h3 lang="en">Flexible</h3>
+                    <p lang="en">Quickly and flexibly respond to the diverse demands of the market.</p>
+                    <h3 lang="vi">Linh hoạt</h3>
+                    <p lang="vi">Đáp ứng nhanh chóng và linh hoạt theo yêu cầu đa dạng của thị trường.</p>
+                </div>
+                <div class="timeline-item" data-number="05">
+                    <h3 lang="en">Learn &amp; improve</h3>
+                    <p lang="en">Continuously improving skills, investing in technology, and refining processes.</p>
+                    <h3 lang="vi">Học hỏi & cải tiến</h3>
+                    <p lang="vi">Không ngừng nâng cao tay nghề, đầu tư công nghệ và hoàn thiện quy trình.</p>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slides">
+                    <img src="assets/image/introduction/corevalue1.png" alt="Slide 1">
+                    <img src="assets/image/introduction/corevalue2.png" alt="Slide 2">
+                    <img src="assets/image/introduction/corevalue3.png" alt="Slide 3">
+                    <img src="assets/image/introduction/corevalue4.png" alt="Slide 4">
+                    <img src="assets/image/introduction/corevalue5.png" alt="Slide 5">
+                    <img src="assets/image/introduction/corevalue6.png" alt="Slide 6">
+                </div>
 
+                <button class="arrow left">&#8592;</button>
+                <button class="arrow right">&#8594;</button>
+
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+      
+    </div>
+    <script>
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        const totalSlides = dots.length;
+        let index = 0;
+
+        function updateSlider() {
+            slides.style.transform = `translateX(-${index * 500}px)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[index].classList.add('active');
+        }
+
+        document.querySelector('.arrow.left').addEventListener('click', () => {
+            index = (index - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        });
+
+        document.querySelector('.arrow.right').addEventListener('click', () => {
+            index = (index + 1) % totalSlides;
+            updateSlider();
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+            index = i;
+            updateSlider();
+            });
+        });
+        setInterval(() => {
+            index = (index + 1) % totalSlides;
+            updateSlider();
+            }, 2000);
+    </script>
     <div class="contact">
         <div class="contact-container">
              <div class="contact-logo">

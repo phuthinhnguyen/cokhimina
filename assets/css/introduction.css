@@ -133,6 +133,137 @@ input, textarea {
   color: rgb(46, 105, 255);
 }
 
+.corevalue {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+  margin-bottom: 50px;
+  font-family: "Alata";
+}
+.corevalue .corevalue-title {
+  display: block;
+  font-size: 40px;
+  border-radius: 50px;
+  border: 2px solid rgb(46, 105, 255);
+  padding: 10px;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+}
+.corevalue .corevalue-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  font-family: "Alata";
+}
+.corevalue .corevalue-content .timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 30px;
+  border-left: 2px solid #ccc;
+  max-width: 600px;
+}
+.corevalue .corevalue-content .timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+.corevalue .corevalue-content .timeline-item::before {
+  content: attr(data-number);
+  position: absolute;
+  left: -50px;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 0.5px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  color: rgb(87, 87, 87);
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.corevalue .corevalue-content .timeline-item h3 {
+  margin-top: 0;
+  color: #0066ff;
+  font-size: 2em;
+  margin-left: 40px;
+  top: -20px;
+}
+.corevalue .corevalue-content .timeline-item p {
+  margin: 15px 0 0;
+  color: rgb(87, 87, 87);
+  line-height: 1.6;
+  font-size: 1.3em;
+  margin-left: 40px;
+}
+.corevalue .corevalue-content .slider {
+  position: relative;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.corevalue .corevalue-content .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+.corevalue .corevalue-content .slides img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.corevalue .corevalue-content .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0066ff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 10;
+}
+.corevalue .corevalue-content .arrow:hover {
+  background-color: white;
+  color: black;
+}
+.corevalue .corevalue-content .arrow.left {
+  left: 10px;
+}
+.corevalue .corevalue-content .arrow.right {
+  right: 10px;
+}
+.corevalue .corevalue-content .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  background-color: rgba(13, 13, 13, 0.2);
+  padding: 15px;
+  border-radius: 20px;
+}
+.corevalue .corevalue-content .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.corevalue .corevalue-content .dot.active {
+  background-color: white;
+}
+
 .contact {
   max-width: 1200px;
   margin: auto;
@@ -192,6 +323,14 @@ input, textarea {
   filter: drop-shadow(0 15px 10px rgba(26, 17, 20, 0.4));
 }
 
+@media screen and (max-width: 1200px) {
+  .corevalue .corevalue-content {
+    display: block;
+  }
+  .corevalue .corevalue-content .slider {
+    margin: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .chart {
     margin-top: 20px;
@@ -225,7 +364,24 @@ input, textarea {
   .vision .vision-text {
     font-size: 18px;
   }
+  .corevalue {
+    margin-top: 20px;
+  }
+  .corevalue .corevalue-title {
+    font-size: 25px;
+  }
   .contact .contact-container .contact-text {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .corevalue .corevalue-content {
+    margin-top: 50px;
+  }
+  .corevalue .corevalue-content .timeline-item h3 {
+    font-size: 27px;
+  }
+  .corevalue .corevalue-content .timeline-item p {
+    font-size: 20px;
   }
 }
