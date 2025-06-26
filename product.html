@@ -14,7 +14,7 @@
     <script src="assets/js/jquery-3.6.4.js"></script>
     <script src="assets/js/HTMLImporter.js"></script>
     <script src="assets/js/language.js"></script>
-    <link rel="icon" type="image/x-icon" href="assets/image/index/logo.webp">
+    <link rel="icon" type="image/x-icon" href="assets/image/index/logo.png">
     <title>cokhimika</title>
     <style>
         @font-face {
@@ -30,7 +30,7 @@
     <!-- top -->
     <script>HTMLImporter.import("menu.html");</script>
 
-    <div class="product">
+    <div class="product" id="product">
         <div lang="en" class="product-title">
             PRODUCT
         </div>
@@ -226,6 +226,10 @@
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 20,
+        autoplay: {
+            delay: 1500, 
+            disableOnInteraction: false 
+            },
         loop: false,
         navigation: {
         nextEl: '.swiper-button-next',
@@ -261,7 +265,7 @@
             DỊCH VỤ
         </div>
        <div class="service-content">
-            <div class="service-content-item">
+            <div class="service-content-item" id="giacongphay">
                 <div class="service-content-item-text" lang="en">
                     CNC milling
                 </div>
@@ -300,7 +304,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-            <div class="service-content-item">
+            <div class="service-content-item" id="giacongtien">
                 <div class="service-content-item-text" lang="en">
                     CCNC turning
                 </div>
@@ -359,7 +363,7 @@
                     <div class="swiper-pagination" style="max-width: 150px;"></div>
                 </div>
             </div>
-            <div class="service-content-item">
+            <div class="service-content-item" id="giacongmai">
                 <div class="service-content-item-text" lang="en">
                     Grinding
                 </div>
@@ -446,10 +450,10 @@
             </div>
             <p class="contact-text" lang="vi">Hợp tác ngay hôm nay</p>
             <p class="contact-text" lang="en">Collaborate today</p>
-            <a class="contact-learnmore" lang="en">
+            <a class="contact-learnmore" lang="en" onclick="window.location.href='contact.html'">
                 CONTACT
             </a>
-            <a class="contact-learnmore" lang="vi">
+            <a class="contact-learnmore" lang="vi" onclick="window.location.href='contact.html'">
                 LIÊN HỆ    
             </a>    
         </div>

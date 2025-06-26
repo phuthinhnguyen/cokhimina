@@ -50,25 +50,3 @@ body{
 }
 
 
-
-
-@media screen and (max-width:991px){
-    .filters-container{
-        padding-left: 10px;
-        padding-right: 10px;
-        .filters-content{
-            .row{
-                max-width: 99%;
-                margin: auto;
-                .all{
-                    max-width: 49%;
-                    .single-menu{
-                        .tittle-wrap{
-
-                        }
-                    }
-                }
-            }
-        }
-    }
-}

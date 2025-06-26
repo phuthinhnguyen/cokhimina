@@ -45,17 +45,3 @@ body {
   background-color: white;
   filter: drop-shadow(0 15px 10px rgba(26, 17, 20, 0.4));
 }
-
-@media screen and (max-width: 991px) {
-  .filters-container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  .filters-container .filters-content .row {
-    max-width: 99%;
-    margin: auto;
-  }
-  .filters-container .filters-content .row .all {
-    max-width: 49%;
-  }
-}

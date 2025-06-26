@@ -34,7 +34,6 @@ input,textarea{
     }
     .product-content{
         .swiper {
-    //   width: 1000px;
       padding-bottom: 40px;
     }
 
@@ -201,10 +200,6 @@ input,textarea{
     margin-top: 50px;
     margin-bottom: 50px;
     row-gap: 20px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // column-gap: 60px;
     @include font($fontAlata);
    
     .contact-container{
