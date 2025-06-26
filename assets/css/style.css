@@ -47,7 +47,6 @@ nav {
   z-index: 3;
   font-family: "Alata";
   color: white;
-  max-width: 1200px;
   margin: auto;
   background-color: rgb(87, 87, 87);
 }
@@ -57,7 +56,8 @@ nav .row {
   align-items: center;
   width: 100%;
   height: 90px;
-  margin: 0;
+  margin: auto;
+  max-width: 1200px;
 }
 nav .row .left {
   flex: 0.5;
@@ -102,6 +102,10 @@ nav .row .center ul li a h6 img {
 }
 nav .row .center ul li a:hover {
   color: rgb(46, 105, 255);
+}
+nav .row .center ul li img {
+  cursor: pointer;
+  margin-top: -10px;
 }
 nav .row .center ul li .menu-dropdown {
   display: none;
@@ -150,6 +154,7 @@ nav .row .right .nav-right-contact {
 nav .row .right .nav-right-contact:hover {
   background-color: white;
   color: black;
+  filter: drop-shadow(0 15px 10px rgba(26, 17, 20, 0.4));
 }
 nav .row .menu {
   display: none;
@@ -237,6 +242,7 @@ nav .row .offcanvas .offcanvas-header-bottom .offcanvas-header-bottom-contact {
 nav .row .offcanvas .offcanvas-header-bottom .offcanvas-header-bottom-contact:hover {
   background-color: white;
   color: black;
+  filter: drop-shadow(0 15px 10px rgba(26, 17, 20, 0.4));
 }
 nav .row .offcanvas .offcanvas-header-bottom .language {
   width: 128px;
@@ -1223,18 +1229,20 @@ nav .row .offcanvas .offcanvas-header-bottom .language img:hover {
 }
 
 footer {
-  max-width: 1200px;
   margin: auto;
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #060810;
+  background-color: rgb(87, 87, 87);
 }
 footer .footer-top {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  flex: 5;
 }
 footer .footer-top .item1 {
   height: 100%;
@@ -1257,15 +1265,56 @@ footer .footer-top .item1 div img {
   height: 40px;
   margin-right: 15px;
 }
+footer .footer-top .item1 .item1-logo-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-top .item1 .item1-logo-text .item1-logo img {
+  width: 88px;
+  height: 70px;
+}
+footer .footer-top .item1 .item1-logo-text .item1-text p {
+  color: white;
+  font-family: "Alata";
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+footer .footer-top .item1 .text2 {
+  margin-top: 15px;
+  color: red;
+  font-family: "Alata";
+  font-size: 17px;
+}
+footer .footer-top .item1 .learmore {
+  margin-top: 15px;
+  background-color: rgb(46, 105, 255);
+  max-width: 160px;
+  padding: 10px 6px;
+  border-radius: 17px;
+  font-family: "Alata";
+  color: white;
+  text-align: center;
+  font-size: 17px;
+  cursor: pointer;
+}
+footer .footer-top .item1 .learmore:hover {
+  color: black;
+  background-color: white;
+  filter: drop-shadow(0 15px 10px rgba(26, 17, 20, 0.4));
+}
 footer .footer-top .item2 {
   display: flex;
-  -moz-column-gap: 56px;
-       column-gap: 56px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  flex: 5;
+  justify-content: flex-end;
 }
 footer .footer-top .item2 .contactus {
   height: 224px;
   max-width: 254px;
-  min-width: 250px;
+  min-width: 180px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1273,12 +1322,21 @@ footer .footer-top .item2 .contactus {
 }
 footer .footer-top .item2 .contactus h4 {
   font-family: "Alata";
-  color: rgb(46, 105, 255);
-  font-weight: bold;
+  color: white;
+  font-size: 20px;
 }
-footer .footer-top .item2 .contactus .content p {
+footer .footer-top .item2 .contactus .content a {
   font-family: "Alata";
-  color: #DDE1E6;
+  color: rgb(13, 13, 13);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 15px;
+  font-size: 17px;
+  transition: 0.4s;
+}
+footer .footer-top .item2 .contactus .content a:hover {
+  color: rgb(46, 105, 255);
+  cursor: pointer;
 }
 footer .footer-top .item2 .contactus .content div p {
   display: inline-block;
@@ -1320,23 +1378,14 @@ footer .footer-top .item2 .navigation .content a:hover, footer .footer-top .item
 footer .footer-top .item2 .navigation .content a:not(:first-of-type), footer .footer-top .item2 .quicklinks .content a:not(:first-of-type) {
   margin-top: 20px;
 }
-footer hr {
-  margin-top: 40px;
-}
 footer .footer-bottom {
-  height: 122px;
-  margin-top: 40px;
+  margin: auto;
+  margin-top: 20px;
   padding: 0 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 1200px;
 }
-footer .footer-bottom p {
-  font-family: "Alata";
-  color: #fff;
-  font-size: small;
-  margin: 0;
-  padding: 0;
+footer .footer-bottom .map {
+  height: 500px;
 }
 
 #scrolltop img {
@@ -1363,17 +1412,6 @@ footer .footer-bottom p {
   }
 }
 @media screen and (max-width: 1300px) {
-  footer .footer-top .item2 {
-    display: grid;
-    grid-template-columns: auto auto;
-    row-gap: 40px;
-  }
-  footer .footer-top .item2 .contactus h4, footer .footer-top .item2 .navigation h4, footer .footer-top .item2 .quicklinks h4 {
-    color: #EA6B39;
-  }
-  footer .footer-top .item2 .contactus .content .app, footer .footer-top .item2 .navigation .content .app, footer .footer-top .item2 .quicklinks .content .app {
-    width: 50%;
-  }
   .content-theytrustus .content-theytrustus-bottom {
     padding: 80px 10px;
   }
@@ -1399,15 +1437,30 @@ footer .footer-bottom p {
     height: 300px;
   }
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1110px) {
+  nav .row .right {
+    flex: 1.2;
+  }
   footer .footer-top {
     display: block;
   }
-  footer .footer-top .item2 {
-    margin-top: 60px;
+  footer .footer-top .item1 {
+    width: 100%;
   }
-  footer .footer-top .item2 .quicklinks .content .app {
-    width: 30%;
+  footer .footer-top .item1 .item1-logo-text {
+    justify-content: center;
+  }
+  footer .footer-top .item1 .text2 {
+    text-align: center;
+  }
+  footer .footer-top .item1 .learmore {
+    margin: auto;
+    margin-top: 20px;
+  }
+  footer .footer-top .item2 {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 1070px) {
@@ -1446,7 +1499,7 @@ footer .footer-bottom p {
   }
   nav .row .right {
     display: inline;
-    flex: 1;
+    flex: 1.4;
   }
   nav .row .right img {
     margin-left: 5px;
@@ -1499,17 +1552,6 @@ footer .footer-bottom p {
   }
   .content-theytrustus .content-theytrustus-bottom .order7, .content-theytrustus .content-theytrustus-bottom .order8 {
     display: none;
-  }
-  footer .footer-top {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-  footer .footer-top .item2 .contactus h4, footer .footer-top .item2 .navigation h4 {
-    color: #EA6B39;
-  }
-  footer .footer-bottom {
-    padding-left: 30px;
-    padding-right: 30px;
   }
   .ftco-counter .container {
     justify-content: space-around;
@@ -1597,16 +1639,24 @@ footer .footer-bottom p {
   .content-featuredproject .content-featuredproject-content .item div img {
     height: 260px;
   }
-}
-@media screen and (max-width: 620px) {
+  footer .footer-top {
+    margin-bottom: 0;
+  }
   footer .footer-top .item2 {
     display: block;
   }
-  footer .footer-top .item2 .quicklinks {
-    margin-top: 40px;
+  footer .footer-top .item2 .contactus {
+    margin-top: 0;
+    margin-bottom: 0px;
   }
-  footer .footer-top .item2 .quicklinks .content .app {
-    width: 30%;
+  footer .footer-top .item2 .contactus h4 {
+    margin-bottom: 0;
+  }
+  footer .footer-top .item2 .contactus .content {
+    margin-top: -10px;
+  }
+  footer .footer-bottom {
+    margin-top: -40px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1669,8 +1719,18 @@ footer .footer-bottom p {
   }
 }
 @media screen and (max-width: 500px) {
-  .image-slide .slide-button {
-    left: 25%;
+  footer {
+    padding: 15px 0;
+  }
+  footer .footer-top .item1 .item1-logo-text .item1-text p {
+    font-size: 18px;
+    text-align: left;
+  }
+  footer .footer-top .item1 .text2 {
+    text-align: left;
+  }
+  footer .footer-top .item1 .learmore {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 450px) {
