@@ -11,7 +11,7 @@ input, textarea {
   border: 1px solid #9AA0A0;
 }
 
-.service {
+.product {
   max-width: 1200px;
   margin: auto;
   padding: 0 40px;
@@ -19,6 +19,83 @@ input, textarea {
   row-gap: 20px;
   font-family: "Alata";
   margin-top: 50px;
+}
+.product .product-title {
+  display: block;
+  font-size: 40px;
+  border-radius: 50px;
+  border: 2px solid rgb(46, 105, 255);
+  padding: 10px;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+}
+.product .product-content .swiper {
+  padding-bottom: 40px;
+}
+.product .product-content .swiper-slide {
+  background-color: rgb(48, 90, 216);
+  border-radius: 30px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.product .product-content .swiper-slide:hover {
+  background: radial-gradient(125% 156% at 50% 50%, rgb(48, 90, 216) 0%, rgb(0, 0, 0) 100%);
+  will-change: transform;
+}
+.product .product-content .swiper-slide img {
+  max-width: 100%;
+  max-height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.product .product-content .quote-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%);
+  background-color: rgb(48, 90, 216);
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 0.1px solid black;
+  cursor: pointer;
+  color: white;
+}
+.product .product-content .swiper-button-next, .product .product-content .swiper-button-prev {
+  color: white;
+}
+.product .product-content .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  max-width: 150px;
+  border-radius: 20px;
+  margin: auto;
+  padding: 4px;
+  background-color: rgba(13, 13, 13, 0.2);
+}
+.product .product-content .swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.service {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 40px;
+  margin-bottom: 50px;
+  row-gap: 20px;
+  font-family: "Alata";
+  margin-top: 80px;
 }
 .service .service-title {
   display: block;
@@ -149,7 +226,19 @@ input, textarea {
   filter: drop-shadow(0 15px 10px rgba(26, 17, 20, 0.4));
 }
 
+@media screen and (max-width: 1026px) {
+  .product .product-content .swiper-pagination {
+    max-width: 200px;
+  }
+}
 @media screen and (max-width: 767px) {
+  .product .product-title {
+    font-size: 25px;
+    max-width: 300px;
+  }
+  .product .product-content .swiper-pagination {
+    max-width: 350px;
+  }
   .service {
     margin-top: 20px;
   }
@@ -162,5 +251,10 @@ input, textarea {
   }
   .contact .contact-container .contact-text {
     font-size: 40px;
+  }
+}
+@media screen and (max-width: 445px) {
+  .product .product-content .swiper-pagination {
+    display: none;
   }
 }
