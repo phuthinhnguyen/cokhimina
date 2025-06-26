@@ -213,17 +213,12 @@
     <!-- footer -->
     <script>HTMLImporter.import("footer.html");</script>
     <script>
-        // $("#scrolltop").click(function name(params) {
-        //     $("html").animate({scrollTop:0});
-        // })
         window.onscroll=function(){scrolltop()};
         function scrolltop(){
             if ((document.body.scrollTop>100) || (document.documentElement.scrollTop>100)){
-            // $("#scrolltop").addClass("scrolltop-show");
             $("nav").addClass('nav-sticky');
             }
             else {
-                // $("#scrolltop").removeClass("scrolltop-show");
                 $("nav").removeClass('nav-sticky');
             };
         }

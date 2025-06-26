@@ -226,47 +226,16 @@
         </div>
     </div>
 
-    <!-- content-getintouch -->
-    <div class="content-getintouch" style="background-image: url(assets/image/index/getintouch1.png);display: none;">
-        <div class="wrap">
-            <div class="content-getintouch-container">
-                <div class="content-getintouch-top">
-                    <h1>Get in touch</h1>
-                </div>
-                <div class="content-getintouch-bottom">
-                    <div class="item1">
-                        <input type="text" placeholder="Enter your Name">
-                        <input type="text" placeholder="Enter your Email">
-                    </div>
-                    <div class="item2">
-                        <input type="text" placeholder="Enter your Subject">
-                    </div>
-                    <div class="item3">
-                        <textarea name="" id="" cols="30" rows="4" placeholder="Enter your Message..."></textarea>
-                    </div>
-                </div>
-                <button type="submit"><img src="assets/image/index/getintouch2.svg" alt=""> Submit</button>
-            </div>
-        </div>
-    </div>
 
     <!-- footer -->
     <script>HTMLImporter.import("footer.html");</script>
-    <!-- <div id="scrolltop" style="display: none;">
-        <img src="assets/image/index/totop.svg" alt="">
-    </div> -->
     <script>
-        // $("#scrolltop").click(function name(params) {
-        //     $("html").animate({scrollTop:0});
-        // })
         window.onscroll=function(){scrolltop()};
         function scrolltop(){
             if ((document.body.scrollTop>100) || (document.documentElement.scrollTop>100)){
-            // $("#scrolltop").addClass("scrolltop-show");
             $("nav").addClass('nav-sticky');
             }
             else {
-                // $("#scrolltop").removeClass("scrolltop-show");
                 $("nav").removeClass('nav-sticky');
             };
         }
