@@ -27,566 +27,71 @@
     <!-- top -->
     <script>HTMLImporter.import("menu.html");</script>
 
-    <!-- image-slide -->
-    <div class="image-slide">
-        <div class="slide-button">
-            <a href="javascript:currentSlide(0)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(1)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(2)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(3)" class="image-slide-button"></a>
-            <a href="javascript:currentSlide(4)" class="image-slide-button"></a>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg1.png)">
-            <div class="text" style="width: auto;">
-                <p lang="en" style="color: #20A049;font-size: 30px;font-weight: bold;">WELCOME TO BYECO<sub>2</sub></p>
-                <p lang="vi" style="color: #20A049;font-size: 30px;font-weight: bold;">Chào mừng quý khách đến website BYECO<sub>2</sub></p>
-                <h1 lang="en"><font color="#F0ff00">Pioneer, Transparency and</font></h1>
-                <h1 lang="en"><font color="#F0ff00">Sustainable Business Cooperation</font></h1>
-                <h1 lang="vi"><font color="#F0ff00">Tiên phong, Minh bạch và Hợp tác bền vững</font></h1>
-                <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4> -->
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg2.png)">
-            <div class="text" style="width: auto;">
-                <p lang="en" style="color: #20A049;font-size: 30px;font-weight: bold;">WELCOME TO BYECO<sub>2</sub></p>
-                <p lang="vi" style="color: #20A049;font-size: 30px;font-weight: bold;">Chào mừng quý khách đến website BYECO<sub>2</sub></p>
-                <h1 lang="en"><font color="#F0ff00">Pioneer, Transparency and</font></h1>
-                <h1 lang="en"><font color="#F0ff00">Sustainable Business Cooperation</font></h1>
-                <h1 lang="vi"><font color="#F0ff00">Tiên phong, Minh bạch và Hợp tác bền vững</font></h1>
-                <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4> -->
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg3.png)">
-            <div class="text" style="width: auto;">
-                <p lang="en" style="color: #20A049;font-size: 30px;font-weight: bold;">WELCOME TO BYECO<sub>2</sub></p>
-                <p lang="vi" style="color: #20A049;font-size: 30px;font-weight: bold;">Chào mừng quý khách đến website BYECO<sub>2</sub></p>
-                <h1 lang="en"><font color="#F0ff00">Pioneer, Transparency and</font></h1>
-                <h1 lang="en"><font color="#F0ff00">Sustainable Business Cooperation</font></h1>
-                <h1 lang="vi"><font color="#F0ff00">Tiên phong, Minh bạch và Hợp tác bền vững</font></h1>
-                <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4> -->
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg4.png)">
-            <div class="text" style="width: auto;">
-                <p lang="en" style="color: #20A049;font-size: 30px;font-weight: bold;">WELCOME TO BYECO<sub>2</sub></p>
-                <p lang="vi" style="color: #20A049;font-size: 30px;font-weight: bold;">Chào mừng quý khách đến website BYECO<sub>2</sub></p>
-                <h1 lang="en"><font color="#F0ff00">Pioneer, Transparency and</font></h1>
-                <h1 lang="en"><font color="#F0ff00">Sustainable Business Cooperation</font></h1>
-                <h1 lang="vi"><font color="#F0ff00">Tiên phong, Minh bạch và Hợp tác bền vững</font></h1>
-                <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4> -->
-            </div>
-        </div>
-        <div class="image-wrap" style="background-image: url(assets/image/index/bg5.png)">
-            <div class="text" style="width: auto;">
-                <p lang="en" style="color: #20A049;font-size: 30px;font-weight: bold;">WELCOME TO BYECO<sub>2</sub></p>
-                <p lang="vi" style="color: #20A049;font-size: 30px;font-weight: bold;">Chào mừng quý khách đến website BYECO<sub>2</sub></p>
-                <h1 lang="en"><font color="#F0ff00">Pioneer, Transparency and</font></h1>
-                <h1 lang="en"><font color="#F0ff00">Sustainable Business Cooperation</font></h1>
-                <h1 lang="vi"><font color="#F0ff00">Tiên phong, Minh bạch và Hợp tác bền vững</font></h1>
-                <!-- <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec</h4> -->
-            </div>
-        </div>
-    </div>
-    <script>
-        let imgslide = document.getElementsByClassName("image-wrap");
-        let imgnav = document.getElementsByClassName("image-slide-button");
-        let index=1;
-        for (let i=0;i<imgslide.length;i++){
-                imgslide[i].style.display="none";
-            }
-        imgslide[0].style.display="flex";
-        imgnav[0].style.backgroundColor  = "white";
-    
-        function slide(){
-            for (let i=0;i<imgslide.length;i++){
-                imgslide[i].style.display="none";
-                imgnav[i].style.backgroundColor="transparent";
-            }
-            imgslide[index].style.display="flex";
-            imgnav[index].style.backgroundColor="white";
-           
-            if (index==imgslide.length-1){
-                index=0;
-            }
-            else index++;
-        }
-        function currentSlide(currentindex){
-            for (let i=0;i<imgslide.length;i++){
-                imgslide[i].style.display="none";
-                imgnav[i].style.backgroundColor="transparent";
-            }
-            index=currentindex;
-            imgslide[index].style.display="flex";
-            imgnav[index].style.backgroundColor="white";
-           
-        }
-        setInterval(slide,5000); 
-    </script>
-
-    <!-- content-ourservices -->
-    <div class="content-ourservices">
-        <div class="content-ourservices-top">
-            <p> </p>
-            <h1 lang="en">Our Services</h1>
-            <h1 lang="vi">Dịch vụ của chúng tôi</h1>
-            <p lang="en">BYECO<sub>2</sub> offer the innovative and comprehensive services for your business</p>
-            <p lang="vi">BYECO<sub>2</sub> mang đến cho các doanh nghiệp giải pháp toàn diện và có hiệu quả kinh tế nhất.</p>
-        </div>
-        <div class="content-ourservices-bottom">
-            <div class="item">
-                <img src="assets/image/index/service4.png" alt="" class="img-service-hover">
-                <div>
-                    <img src="assets/image/index/service1.png" alt="">
-                    <h3 lang="en">Energy</h3>
-                    <h3 lang="vi">Năng lượng</h3>
-                    <p> </p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/image/index/service5.png" alt="" class="img-service-hover">
-                <div>
-                    <img src="assets/image/index/service2.png" alt="">
-                    <h3 lang="en">Climate</h3>
-                    <h3 lang="vi">Khí hậu</h3>
-                    <p> </p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/image/index/service6.png" alt="" class="img-service-hover">
-                <div>
-                    <img src="assets/image/index/service3.svg" alt="">
-                    <h3 lang="en">Digital <br>transformation</h3>
-                    <h3 lang="vi">Chuyển đổi <br>kĩ thuật số</h3>
-                    <p> </p>
-                </div>
-            </div>
-        </div>
+    <!-- banner -->
+    <div class="banner">
+       <img src="assets/image/index/banner.webp" alt="">
     </div>
     
-    <!-- animate number -->
-    <section class="ftco-section ftco-counter" id="section-counter" style="background-image: url(assets/image/index/bg_4.png);" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="329">329</strong>
-                        <h5>Factories</h5>
-                    </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="5461080">5461080</strong>
-                        <h5>Energy saving <br/>(TJ/Yr)</h5>
-                    </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="704">704</strong>
-                        <h5>GHG Saving <br/>(10^3 Tone CO2)</h5>
-                    </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                <div class="text">
-                    <strong class="number" data-number="43">43+</strong>
-                    <h5>Potential CO2 Credit <br/>(Mil USD) </h5>
-                </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                <div class="text">
-                    <strong class="number" data-number="186">186+</strong>
-                    <h5>Solar offset <br/> (kWh/yr)</h5>
-                </div>
-            </div>
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                <div class="text">
-                    <strong class="number" data-number="704">704+</strong>
-                    <h5>Solar offset <br/>(10^3 Tone CO2)</h5>
-                </div>
-            </div>
-            
-            <div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
-                    <div class="text">
-                        <strong class="number" data-number="75">75</strong>
-                        <h5>Money return <br/>(Mil USD)</h5>
-                    </div>
-            </div>
+    <!-- experience -->
+    <div class="experience">
+        <div class="experience-star">
+           <div class="experience-star-item1">
+                <img src="assets/image/index/star.svg" alt="">
+           </div>
+           <div class="experience-star-item2">
+                <p lang="en">20 years of experience</p>
+                <p lang="vi">20 năm kinh nghiệm&nbsp;&nbsp;&nbsp;</p>
+           </div>
         </div>
-    </section>
-    <script src="assets/js/jquery.animateNumber.min.js"></script>
-    <script src="assets/js/jquery.waypoints.min.js"></script>
-    <script>
-        var counter = function() {
-            $('#section-counter').waypoint( function( direction ) {
-                if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-                    var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
-                    $('.number').each(function(){
-                        var $this = $(this),
-                            num = $this.data('number');
-                        $this.animateNumber(
-                        {
-                            number: num,
-                            numberStep: comma_separator_number_step
-                        }, 7000
-                        );
-                    });
-                    
-                }
-
-            } , { offset: '95%' } );
-        }
-        counter();
-
-        var contentWayPoint = function() {
-            var i = 0;
-            $('.ftco-animate').waypoint( function( direction ) {
-                if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
-                    i++;
-                    $(this.element).addClass('item-animate');
-                    setTimeout(function(){
-                        $('body .ftco-animate.item-animate').each(function(k){
-                            var el = $(this);
-                            setTimeout( function () {
-                                var effect = el.data('animate-effect');
-                                if ( effect === 'fadeIn') {
-                                    el.addClass('fadeIn ftco-animated');
-                                } else if ( effect === 'fadeInLeft') {
-                                    el.addClass('fadeInLeft ftco-animated');
-                                } else if ( effect === 'fadeInRight') {
-                                    el.addClass('fadeInRight ftco-animated');
-                                } else {
-                                    el.addClass('fadeInUp ftco-animated');
-                                }
-                                el.removeClass('item-animate');
-                            },  k * 50, 'easeInOutExpo' );
-                        });
-                
-                    }, 100);
-                }
-            } , { offset: '95%' } );
-        };
-        contentWayPoint();
-    </script>
-
-    <!-- content-masssolutions -->
-    <div class="content-masssolutions" style="background-image: url(assets/image/index/pexels-los-muertos-crew-8853502.png);display: none;">
-        <div class="content-masssolutions-container">
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top" style="height: 0px;">                    
-                    <h1>Mass Solutions</h1>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>improve air conditioner performance</h4>
-                        <p>The higher the air conditioner efficiency, the less energy consumption</p>
-                    </div>
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Improve boiler efficiency</h4>
-                        <p>Energy saving = Energy supplying old boiler - Energy supplying new boiler</p>
-                    </div>
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Improve air compressor efficiency</h4>
-                        <p>Saving electricity = (Existing compressor electricity consumption - New air compressor electricity consumption) * Compressed air load</p>
-                    </div>
-                    <div class="item">
-                        <div></div>
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Install inverter for fan pump</h4>
-                        <p>Power saving for centrifugal fan pump adopts the same law
-                            Energy saving = Savings * Actual capacity
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <!--
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="masssolutions-wrap">
-                <div class="masssolutions-wrap-top">
-                    <p>FROM IDEA TO REALIZATION</p>
-                    <h1>Mass Solutions</h1>
-                    <p>At lacus vitae nulla sagittis scelerisque nisl.</p>
-                    <p>Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-                </div>
-                <div class="masssolutions-wrap-bottom">
-                    <div class="item">
-                        <img src="assets/image/index/10-year-experience.svg" alt="">
-                        <h4>10 Years Experience</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/extra-performance.svg" alt="">
-                        <h4>Extra Performance</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/pro-report.svg" alt="">
-                        <h4>Pro Reports</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                    <div class="item">
-                        <img src="assets/image/index/staging-process.svg" alt="">
-                        <h4>Staging Process</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec.</p>
-                    </div>
-                </div>
-            </div>
-            -->
-            <div class="masssolutions-button">
-                <a href="javascript:currentSlidemasssolutions(0)" class="masssolutions-slide-button"></a>
-                <a href="javascript:currentSlidemasssolutions(1)" class="masssolutions-slide-button"></a>
-                <a href="javascript:currentSlidemasssolutions(2)" class="masssolutions-slide-button"></a>
-                <a href="javascript:currentSlidemasssolutions(3)" class="masssolutions-slide-button"></a>
-            </div>
+        <div class="experience-text">
+            " Giá trị ở cái tâm <br>
+            Dựng xây tầm chất lượng "
+        </div>
+        <div class="experience-learnmore" lang="en">
+            LEARN MORE
+        </div>
+        <div class="experience-learnmore" lang="vi">
+           TÌM HIỂU THÊM     
         </div>
     </div>
-    <script>
-        let imgslidemasssolutions = document.getElementsByClassName("masssolutions-wrap");
-        let imgnavmasssolutions = document.getElementsByClassName("masssolutions-slide-button");
-        let indexmasssolutions=1;
-        for (let i=0;i<imgslidemasssolutions.length;i++){
-                imgslidemasssolutions[i].style.display="none";
-                imgnavmasssolutions[i].style.backgroundColor="#9AA0A0";
-            }
-        imgslidemasssolutions[0].style.display="block";
-        imgnavmasssolutions[0].style.backgroundColor  = "#20A049";
-    
-        function slidemasssolutions(){
-            for (let i=0;i<imgslidemasssolutions.length;i++){
-                imgslidemasssolutions[i].style.display="none";
-                imgnavmasssolutions[i].style.backgroundColor="#9AA0A0";
-            }
-            imgslidemasssolutions[indexmasssolutions].style.display="block";
-            imgnavmasssolutions[indexmasssolutions].style.backgroundColor="#20A049";
-           
-            if (indexmasssolutions==imgslidemasssolutions.length-1){
-                indexmasssolutions=0;
-            }
-            else indexmasssolutions++;
-        }
-        function currentSlidemasssolutions(currentindexmasssolutions){
-            for (let i=0;i<imgslidemasssolutions.length;i++){
-                imgslidemasssolutions[i].style.display="none";
-                imgnavmasssolutions[i].style.backgroundColor="#9AA0A0";
-            }
-            indexmasssolutions=currentindexmasssolutions;
-            imgslidemasssolutions[indexmasssolutions].style.display="block";
-            imgnavmasssolutions[indexmasssolutions].style.backgroundColor="#20A049";
-           
-        }
-        // setInterval(slidemasssolutions,5000); 
-    </script>
 
-    <!-- content-whatpeoplesayaboutus -->
-    <!--
-    <div class="content-whatpeoplesayaboutus">
-        <div class="content-whatpeoplesayaboutus-top">
-            <p>TRUSTED COMPANY</p>
-            <h1>What people say about us</h1>
-            <p>At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis cursus vestibulum, facilisi ac, sed.</p>
-        </div>
-        <div class="content-whatpeoplesayaboutus-bottom">
-            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <div class="carousel-item-wrap">
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-1.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-2.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-3.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
+    <div class="commitment">
+        <div class="commitment-item1">
+            <div lang="en" class="commitment-item1-title">
+                COMMITMENT
+            </div>
+            <div lang="vi" class="commitment-item1-title">
+                CAM KẾT
+            </div>
+            <div class="commitment-item1-text">
+                <div class="commitment-item1-text-item">
+                    <div class="check">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="bold"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></g></svg>
                     </div>
-                  </div>
-                  <div class="carousel-item">
-                    <div class="carousel-item-wrap">
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-1.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-2.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <img src="assets/image/index/Ellipse-3.svg" alt="">
-                                <img src="assets/image/index/quote.svg" alt="" class="quote">
-                            </div>
-                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-                            <a></a>
-                            <h6>Jan Stiedemann</h6>
-                            <p>Global Applications Representative</p>
-                        </div>
-                    </div>
-                  </div>
+                    <p lang="en">COMPETITIVE PRICE</p>
+                    <p lang="vi">GIÁ CẠNH TRANH</p>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"><img src="assets/image/index/arrowleft.svg" alt=""></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"><img src="assets/image/index/arrowright.svg" alt=""></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
+                <div class="commitment-item1-text-item">
+                    <div class="check">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="bold"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></g></svg>
+                    </div>
+                    <p lang="en">QUALITY</p>
+                    <p lang="vi">CHẤT LƯỢNG</p>
+                </div>
+                 <div class="commitment-item1-text-item">
+                    <div class="check">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(255, 255, 255)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(255, 255, 255); color: rgb(255, 255, 255); flex-shrink: 0;"><g color="rgb(255, 255, 255)" weight="bold"><path d="M232.49,80.49l-128,128a12,12,0,0,1-17,0l-56-56a12,12,0,1,1,17-17L96,183,215.51,63.51a12,12,0,0,1,17,17Z"></path></g></svg>
+                    </div>
+                    <p lang="en">ON SCHEDULE</p>
+                    <p lang="vi">ĐÚNG TIẾN ĐỘ</p>
+                </div>
+            </div>
+        </div>
+         <div class="commitment-item2">
+            <img src="assets/image/index/commit.webp" alt="">
         </div>
     </div>
-    -->
-    <!-- featuredproject -->
-    <div class="content-featuredproject">
-        <div class="content-featuredproject-top">
-            <p lang="en">BEST PRACTICE</p>
-            <p lang="vi">KINH NGHIỆM ĐA THỰC TIỄN </p>
-            <h1 lang="en">Featured Project</h1>
-            <h1 lang="vi">Dự án đặc trưng</h1>
-            <p>--</p>
-        </div>
-        <div class="content-featuredproject-content">
-            <div class="item item4">
-                <div>
-                    <img src="assets/image/index/featuredproject4.png" alt="">
-                </div>
-                <h6>Scientex Tsukasa (VN)</h6>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="assets/image/index/featuredproject2.png" alt="">
-                </div>
-                <h6>Cat Tuong Seafood</h6>
-            </div>
-            <div class="item">
-                <div>
-                    <img src="assets/image/index/featuredproject3.png" alt="">
-                </div>
-                <h6>Uchiyama Vietnam</h6>
-            </div>
-            
-            <div class="item">
-                <div>
-                    <img src="assets/image/index/featuredproject1.png" alt="">
-                </div>
-                <h6>Ha Tien Cement company</h6>
-            </div>
-            <div class="item item5">
-                <div>
-                    <img src="assets/image/index/featuredproject5.png" alt="">
-                </div>
-                <h6>Green River Furniture</h6>
-            </div>
-            <div class="item item6">
-                <div>
-                    <img src="assets/image/index/featuredproject6.png" alt="">
-                </div>
-                <h6>Posco VST</h6>
-            </div>
-        </div>
-        <div class="seemore1" onclick="window.location.href='gallery.html'">
-            <p lang="en">See more</p>
-            <p lang="vi">Xem thêm</p>
-            <div>
-                <img src="assets/image/index/seemore.svg" alt=""> 
-            </div>
-        </div>
-    </div>
+  
     
     <!-- content-theytrustus -->
     <div class="content-theytrustus">
