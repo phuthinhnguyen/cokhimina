@@ -84,11 +84,14 @@
             </div>
 
             <div class="form-container">
-                <form id="contactForm">
+                <form action="https://formsubmit.co/hongson789987@gmail.com" method="POST">
+                      <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="/thank-you.html">
+                        
                     <div class="form-group">
                         <label for="reason" lang="vi">Nhu cầu liên hệ</label>
                         <label for="reason" lang="en">Contact demand</label>
-                        <select id="reason">
+                        <select id="reason" name="reason">
                             <option lang="vi">Chăm sóc khách hàng</option>
                             <option lang="en">Customer care</option>
                             <option lang="vi">Kinh doanh</option>
@@ -123,9 +126,10 @@
                         <label for="subscribe" lang="en"> Sign up for notifications </label>
                     </div>
 
-                    <button class="submit-btn" onclick="submit(); return false" lang="vi">Gửi liên hệ</button>
-                    <button class="submit-btn" onclick="submit(); return false" lang="en">Send contact</button>     
-
+                    <button class="submit-btn" lang="vi">Gửi liên hệ</button>
+                    <button class="submit-btn" lang="en">Send contact</button>     
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="/success.html">
                 </form>
                
             </div>
@@ -177,34 +181,17 @@
         //     form.reset();
         // }
         // });
-        function submit() {
-            var name = document.getElementById("name");
-            var email = document.getElementById("email");
-            var message = document.getElementById("message");
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "phuthinhnguyen1101@gmail.com",
-                Password : "D96B9CC46BD97B138DCF21F8F5B78F2FED08",
-                To : 'agl19932001@gmail.com',
-                From : "phuthinhnguyen1101@gmail.com",
-                Subject : "testmailfromThinh",
-                Body : `[From: ${name.value}, ${email.value}]<br>${message.value}`
-            }).then(message=>{
-                if (message=="OK"){
-                    // $('.toast').toast("show")
-                    alert("Gửi liên hệ thành công!");
-                }
-            })
-            name.value="";
-            email.value="";
-            // subject.value="";
-            message.value="";
-        }
+    function submit() {
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+       var message = document.getElementById("message");
+    // Reset form
+    name.value = "";
+    email.value = "";
+    message.value = "";
+}
     </script>
  
-
-   
-
 
     <!-- footer -->
     <script>HTMLImporter.import("footer.html");</script>
