@@ -133,6 +133,10 @@ nav{
                 }
             }
         }
+        // .menu-language{
+        //     display: none;
+        //     max-width: 50px;
+        // }
         .offcanvas{
             padding: 0;
             display: flex;
@@ -1061,6 +1065,18 @@ footer{
                         // color: $dark-blue-01;
                         font-size: large;
                     }
+                }
+              
+            }
+            .menu-language{
+                display: flex;
+                margin: auto;
+                column-gap: 10px;
+                margin-left: 1px;
+                img{
+                    width: 150px;
+                    height: 150px;
+                    cursor: pointer;
                 }
             }
         }

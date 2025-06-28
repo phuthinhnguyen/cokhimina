@@ -957,6 +957,18 @@ footer .footer-bottom .map {
   nav .row .menu a img {
     font-size: large;
   }
+  nav .row .menu-language {
+    display: flex;
+    margin: auto;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    margin-left: 1px;
+  }
+  nav .row .menu-language img {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 920px) {
   .process .process-content {
